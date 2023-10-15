@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Cron:etc/crontab.xsd">
+  <group id="awesoft">
+    <job instance="Awesoft\FastlyNodepingAcl\Cron\UpdateIpAddresses"
+         name="awesoft_nodeping_update_ip_addresses"
+         method="execute">
+      <config_path>awesoft/fastly_nodeping_acl/cron_schedule</config_path>
+    </job>
+  </group>
+</config>

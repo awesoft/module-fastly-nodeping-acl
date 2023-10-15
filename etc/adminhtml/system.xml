@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+  <system>
+    <section id="fastly_nodeping_acl" translate="label" sortOrder="20"
+             showInDefault="1" showInWebsite="0" showInStore="0">
+      <resource>Awesoft_FastlyNodepingAcl::config</resource>
+      <label>Fastly Nodeping ACL</label>
+      <tab>awesoft</tab>
+      <group id="nodeping_settings" translate="label" sortOrder="10" showInDefault="1" showInWebsite="0"
+             showInStore="0">
+        <label>Nodeping Settings</label>
+        <comment>Automatically update specific Fastly ACL items with Nodeping's IP address list.</comment>
+        <field id="is_enabled" translate="label" type="select" sortOrder="10"
+               showInDefault="1" showInWebsite="0" showInStore="0">
+          <label>Enabled</label>
+          <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+          <config_path>awesoft/fastly_nodeping_acl/is_enabled</config_path>
+          <comment>Enable Fastly-Nodeping ACL update</comment>
+        </field>
+        <field id="ip_type" translate="text" type="select" sortOrder="20"
+               showInDefault="1" showInWebsite="0" showInStore="0">
+          <label>IP Type</label>
+          <depends>
+            <field id="is_enabled">1</field>
+          </depends>
+          <config_path>awesoft/fastly_nodeping_acl/ip_type</config_path>
+          <comment>Filter IP address type to be updated.</comment>
+          <source_model>Awesoft\FastlyNodepingAcl\Model\Config\Source\IpType</source_model>
+        </field>
+        <field id="fastly_acl" translate="text" type="select" sortOrder="20"
+               showInDefault="1" showInWebsite="0" showInStore="0">
+          <label>Fastly ACL</label>
+          <depends>
+            <field id="is_enabled">1</field>
+          </depends>
+          <config_path>awesoft/fastly_nodeping_acl/fastly_acl</config_path>
+          <comment>Filter which IP address type to be updated.</comment>
+          <source_model>Fastly\Cdn\Model\Config\Backend\ListAcl</source_model>
+        </field>
+        <field id="cron_schedule" translate="text" type="select" sortOrder="20"
+               showInDefault="1" showInWebsite="0" showInStore="0">
+          <label>Cron Schedule</label>
+          <depends>
+            <field id="is_enabled">1</field>
+          </depends>
+          <config_path>awesoft/fastly_nodeping_acl/cron_schedule</config_path>
+          <comment>Frequency of Nodeping IP ACL updates to Fastly</comment>
+          <source_model>Awesoft\FastlyNodepingAcl\Model\Config\Source\CronSchedule</source_model>
+        </field>
+      </group>
+    </section>
+  </system>
+</config>

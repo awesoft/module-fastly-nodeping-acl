@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+  <default>
+    <system>
+      <awesoft>
+        <fastly_nodeping_acl>
+          <enabled>0</enabled>
+          <ip_type>any</ip_type>
+          <cron_schedule>0 0 * * *</cron_schedule>
+        </fastly_nodeping_acl>
+      </awesoft>
+    </system>
+  </default>
+</config>

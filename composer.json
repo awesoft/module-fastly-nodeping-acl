@@ -1,0 +1,20 @@
+{
+  "name": "awesoft/module-fastly-nodeping-acl",
+  "description": "Update Fastly ACL with Nodeping IP addresses",
+  "type": "magento2-module",
+  "require": {
+    "awesoft/module-framework": "^1.0",
+    "fastly/magento2": "1.2.*"
+  },
+  "license": [
+    "MIT"
+  ],
+  "autoload": {
+    "files": [
+      "registration.php"
+    ],
+    "psr-4": {
+      "Awesoft\\FastlyNodepingAcl\\": ""
+    }
+  }
+}

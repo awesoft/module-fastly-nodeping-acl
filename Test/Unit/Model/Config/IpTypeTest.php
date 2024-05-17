@@ -16,7 +16,7 @@ class IpTypeTest extends TestCase
     {
         $this->assertSame(
             [
-                ['value' => IpType::ANY, 'label' => 'Any (IPv4/IPv6)'],
+                ['value' => IpType::ANY, 'label' => 'IPv4 & IPv6'],
                 ['value' => IpType::IPV4, 'label' => 'IPv4 only'],
                 ['value' => IpType::IPV6, 'label' => 'IPv6 only'],
             ],

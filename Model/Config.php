@@ -4,16 +4,13 @@ declare(strict_types=1);
 
 namespace Awesoft\FastlyNodepingAcl\Model;
 
+use Awesoft\FastlyNodepingAcl\Api\Model\ConfigInterface;
 use Awesoft\FastlyNodepingAcl\Model\Config\Source\IpType;
 use Fastly\Cdn\Model\Config as FastlyConfig;
 use Magento\Framework\App\Config\ScopeConfigInterface;
 
-class Config
+class Config implements ConfigInterface
 {
-    public const XML_PATH_IS_ENABLED = 'awesoft/fastly_nodeping_acl/is_enabled';
-    public const XML_PATH_IP_TYPE = 'awesoft/fastly_nodeping_acl/ip_type';
-    public const XML_PATH_FASTLY_ACL = 'awesoft/fastly_nodeping_acl/fastly_acl';
-
     /**
      * Config constructor.
      *

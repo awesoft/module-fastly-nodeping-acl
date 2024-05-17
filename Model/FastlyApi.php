@@ -4,11 +4,12 @@ declare(strict_types=1);
 
 namespace Awesoft\FastlyNodepingAcl\Model;
 
+use Awesoft\FastlyNodepingAcl\Api\Model\FastlyApiInterface;
 use Fastly\Cdn\Helper\Vcl;
 use Fastly\Cdn\Model\Api;
 use Magento\Framework\Exception\LocalizedException;
 
-class FastlyApi
+class FastlyApi implements FastlyApiInterface
 {
     /**
      * FastlyApi constructor.

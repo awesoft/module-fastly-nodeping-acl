@@ -6,4 +6,13 @@
       <argument name="logger" xsi:type="object">Awesoft\Framework\Logger\Logger</argument>
     </arguments>
   </type>
+
+  <preference for="Awesoft\FastlyNodepingAcl\Api\Model\ConfigInterface"
+              type="Awesoft\FastlyNodepingAcl\Model\Config"/>
+  <preference for="Awesoft\FastlyNodepingAcl\Api\Model\FastlyApiInterface"
+              type="Awesoft\FastlyNodepingAcl\Model\FastlyApi"/>
+  <preference for="Awesoft\FastlyNodepingAcl\Api\Model\NodepingApiInterface"
+              type="Awesoft\FastlyNodepingAcl\Model\NodepingApi"/>
+  <preference for="Awesoft\FastlyNodepingAcl\Api\Cron\UpdateIpAddressesInterface"
+              type="Awesoft\FastlyNodepingAcl\Cron\UpdateIpAddresses"/>
 </config>

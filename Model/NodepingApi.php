@@ -4,29 +4,22 @@ declare(strict_types=1);
 
 namespace Awesoft\FastlyNodepingAcl\Model;
 
+use Awesoft\FastlyNodepingAcl\Api\Model\ConfigInterface;
+use Awesoft\FastlyNodepingAcl\Api\Model\NodepingApiInterface;
 use GuzzleHttp\ClientFactory;
 use GuzzleHttp\Exception\GuzzleException;
-use GuzzleHttp\RequestOptions;
 
-class NodepingApi
+class NodepingApi implements NodepingApiInterface
 {
-    private const ENDPOINT = 'https://nodeping.com/content/txt/pinghosts.txt';
-    private const OPTIONS = [
-        RequestOptions::HEADERS => ['Cache-Control' => 'no-cache, no-store'],
-        RequestOptions::CONNECT_TIMEOUT => 5,
-        RequestOptions::READ_TIMEOUT => 5,
-        RequestOptions::VERIFY => true,
-    ];
-
     /**
      * NodepingApi constructor.
      *
      * @param ClientFactory $clientFactory
-     * @param Config $config
+     * @param ConfigInterface $config
      */
     public function __construct(
         private readonly ClientFactory $clientFactory,
-        private readonly Config $config,
+        private readonly ConfigInterface $config,
     ) {
     }
 

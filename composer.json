@@ -4,7 +4,7 @@
   "type": "magento2-module",
   "require": {
     "awesoft/module-framework": "^1.0",
-    "fastly/magento2": "1.2.*"
+    "fastly/magento2": "^1.2"
   },
   "license": [
     "MIT"
